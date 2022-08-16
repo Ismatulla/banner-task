@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import FirstMainBanner from "./components/FirstMainBanner";
+import SecondMainBanner from "./components/SecondMainBanner";
+import RectangleBanner from "./components/RectangleBanner";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <FirstMainBanner
+        mode="square"
+        carousel-on-mobile="false"
+      />
+      <SecondMainBanner
+        mode="square"
+        carousel-on-mobile="true"
+      />
+      <RectangleBanner
+        mode="rectangle"
+        carousel-on-mobile="false"
+      />
     </div>
   );
 }
