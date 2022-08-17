@@ -6,19 +6,18 @@ function FirstSquareBanner({ src, button, title, link, type }) {
 
             {src ? (
                 <div className='square'>
-                    <div className='img1'>
+                    <div className="square_box">
                         <a href={link} className='anchor_link' ></a>
-                        <div className="img_container ">
+                        <div className='img_container'>
                             <img src={src} alt='not image found' />
                         </div>
                     </div>
                 </div>
-
             ) : (
-                <div className=' cta_1 square CTA_container'>
-                    <div className='img1'>
+                <div className=' cta_1 square '>
+                    <div className=" cta_box img1">
                         <a href={link} className='anchor_link'></a>
-                        <div className='CTA_inner img_container '>
+                        <div className='CTA_inner img_container'>
                             <h2>{title}</h2>
                             <button className='cta_button' >{button}</button>
                         </div>

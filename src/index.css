@@ -1,84 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 /* main container class */
 .container {
-  max-width: 1200px;
+  max-width: 90%;
   margin: 0 auto;
 }
-/* General classes for all Banners */
 .main_banner1 {
-  display: grid;
-  justify-items: center;
-  align-content: center;
   margin-top: 2rem;
+  display: grid;
+  place-items: center;
 }
+
+/* /////////////////////// */
+/* general classes */
 .square {
   position: relative;
   width: 100%;
-  padding-bottom: 100%;
+}
+.square .square_box {
+  height: 0;
+  width: 100%;
+  padding-top: 100%;
+}
+.cta_box {
+  height: 0;
+  width: 100%;
+  padding-top: 100%;
 }
 .img1 {
-  position: absolute;
-  height: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
   background-color: rgb(167, 225, 245);
 }
-
+.img2 {
+  background-color: #bfee90;
+}
 .img_container {
-  width: 100%;
-  height: 100%;
-}
-.CTA_inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  height: 8rem;
-}
-.square a {
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.img_container img {
+  width: 100%;
+  display: block;
+}
+.anchor_link {
   position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.CTA_inner {
+  top: 50%;
+  width: 100%;
+  display: block;
+  text-align: center;
+  transform: translateY(-50%);
+}
+.CTA_inner h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 2rem 0;
 }
 .cta_button {
   background-color: transparent;
   padding: 1rem 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  margin-bottom: 2rem;
 }
-
-img {
+.header {
+  text-align: center;
   display: block;
+  margin: 4rem 0 2rem 0;
 }
 /* ///////////////////////////// */
-
 /* first banner class */
-.cta_1 {
-  background-color: rgb(167, 225, 245);
-}
 
-@media (min-width: 280px) and(max-width:480px) {
+@media (min-width: 280px) {
   .main_banner1 {
     grid-template-columns: 1fr;
   }
-}
-@media (min-width: 481px) {
-  .main_banner1 {
-    grid-template-columns: repeat(2, 1fr);
+  .mobile_carousel,
+  .mobile_rectangle {
+    display: block;
+  }
+  .CTA_rectangle{
+    padding-top: 2rem;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 375px) {
+  .main_banner1 {
+    grid-template-columns: 1fr;
+  }
+  .CTA_rectangle{
+    padding-top: 5rem;
+  }
+  .cta_box {
+    padding-top: 60%;
+    width: 100%;
+  }
+  .mobile_carousel {
+    display: block;
+    margin: 4rem auto, 4rem, auto;
+  }
+  .mobile_rectangle {
+    display: block;
+  }
+}
+@media (min-width: 700px) {
   .main_banner1 {
     grid-template-columns: repeat(3, 1fr);
   }
+  .cta_box {
+    padding-top: 100%;
+  }
+  .mobile_carousel,
+  .mobile_rectangle {
+    display: none;
+  }
+  .CTA_container {
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
 }
 /* //////////////////// */
+/* Rectangle banner  */
+
+.rectangle_banner1 {
+  margin-bottom: 10rem;
+  width: 100%;
+}
+.flex_rectangle {
+  position: relative;
+  width: 100%;
+}
+.bg_img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.CTA_container {
+  width: 100%;
+}
+.CTA_rectangle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  min-height: 10rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.CTA_rectangle h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.CTA_rectangle button {
+  margin-bottom: 2rem;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.mobile_rectangle {
+  display: block;
+  width: 100%;
+}
