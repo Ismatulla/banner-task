@@ -1,10 +1,8 @@
 import React from 'react';
-import RectangleBanner from './RectangleBanner';
 import { rectangleData } from '../components/allData'
 import useWindowSize from './useWindowSize'
 function RectangleMainBanner(props) {
     const [width] = useWindowSize()
-    console.log(width);
     return (
         <div className='rectangle_banner1'>
             <div className='flex_rectangle'>
